@@ -1,0 +1,122 @@
+/*====== RESET =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== VARIABLES =====*/
+:root {
+  /* colors */
+
+  --background-color-one: #1d1345;
+  --background-color-two: #1b0d31;
+  --background-color-two-lighter: #201639;
+  --text-color: #b485e5;
+
+  /* fonts */
+  --title-font-size: 1.75rem;
+  --body-font-size: 1.25rem;
+
+  --title-font: 'PlayFair Display', serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/*========= BASE ===========*/
+
+body {
+  font: var(--body-font-size) var(--body-font), sans-serif;
+  color: var(--text-color);
+  background: var(--background-color-one);
+}
+
+/*=========== LAYOUT =========*/
+
+.container {
+  padding: 0.5rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/*========= HEADER ==========*/
+
+#header {
+  border-bottom: 3px solid var(--background-color-two);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#header .description {
+  font: 500 var(--title-font-size) var(--title-font), sans-serif;
+  color: var(--text-color);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/*==========  FORM  ===========*/
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+#binaryCalculator {
+  background-color: var(--background-color-two);
+  padding: 2rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  align-items: center;
+  min-width: 440px;
+  max-width: 520px;
+}
+
+#values {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background-color: var(--background-color-two-lighter);
+  font: var(--body-font-size) var(--body-font);
+  border: none;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  width: 16rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  padding-left: 0.43rem;
+}
+
+.button {
+  background-color: var(--background-color-two-lighter);
+  color: var(--text-color);
+  height: 2.5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font: var(--body-font) var(--title-font-size);
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--background-color-one);
+}
+
+.output {
+  background-color: var(--background-color-two-lighter);
+  color: gray;
+  border-radius: 0.5rem;
+  padding: 0.43rem 0 0.43rem 0.43rem;
+}
+
+label {
+  font: var(--body-font) var(--body-font-size);
+  opacity: 75%;
+}
